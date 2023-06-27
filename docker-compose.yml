@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: ./docker/python
+      dockerfile: dockerfile
+    working_dir: "/workspace"
+    volumes:
+      - ./workspace:/workspace
+    tty: true
